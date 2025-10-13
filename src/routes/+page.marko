@@ -1,0 +1,10 @@
+<p>Try reloading this page without and with a hard refresh with <code>cmd+r</code> and <code>cmd+shift+r</code> respectively.</p>
+<p>Notice that errors appear in the hard refresh version, but not in the normal refresh version.</p>
+
+<server-await|_|=($global.loader.promiseResolution)>
+  <div>data</div>
+</server-await>
+
+<server-await|_|=($global.loader.promiseRejection)>
+  <div>data</div>
+</server-await>

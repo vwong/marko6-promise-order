@@ -1,0 +1,18 @@
+export interface Input<T> {
+  value: Promise<T>;
+  content: Marko.Body<[T]>;
+}
+
+<try>
+  <@catch|error: Error|>
+    <!-- server-side logic: maybe bug tracking, logging, etc. -->
+    <log=error.message>
+
+    <!-- client-side logic: show an error message -->
+    <div>rejected with server errors</div>
+  </@catch>
+
+  <await|result|=input.value>
+    <${input.content}(result as T)/>
+  </await>
+</try>

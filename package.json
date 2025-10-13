@@ -1,0 +1,15 @@
+{
+  "name": "marko6-promise-order",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "marko-run build",
+    "dev": "marko-run",
+    "preview": "marko-run preview"
+  },
+  "dependencies": {
+    "@marko/run": "^0.8.1",
+    "marko": "^6.0.86"
+  }
+}
