@@ -18,7 +18,7 @@ const MEDIUM = 50;
 const SLOW = 100;
 
 export const GET: MarkoRun.Handler = async (context) => {
-  const { headers  } = context.request;
+  const { headers } = context.request;
   const isHardReload =
     headers.get("pragma") === "no-cache" || // Safari, Firefox
     headers.get("cache-control") === "no-cache"; // Chrome
@@ -28,4 +28,3 @@ export const GET: MarkoRun.Handler = async (context) => {
   };
   context.loader.promiseRejection.catch(() => {});
 };
-
