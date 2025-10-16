@@ -24,6 +24,7 @@ export const GET: MarkoRun.Handler = async (context) => {
     headers.get("cache-control") === "no-cache"; // Chrome
   context.loader = {
     promiseRejection: rejectAfter(MEDIUM),
+    finalPromise: resolveAfter(MEDIUM),
     promiseResolution: resolveAfter(isHardReload ? SLOW : FAST),
   };
   context.loader.promiseRejection.catch(() => {});

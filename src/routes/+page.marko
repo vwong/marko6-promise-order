@@ -8,3 +8,11 @@
 <server-await|_|=($global.loader.promiseRejection)>
   <div>data</div>
 </server-await>
+
+<server-await|_|=($global.loader.finalPromise)>
+  <button onClick() {
+    console.log("hey");
+  }>
+    click
+  </button>
+</server-await>
